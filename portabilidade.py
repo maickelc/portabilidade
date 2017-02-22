@@ -51,6 +51,10 @@ app = Flask(__name__)
 
 O = Oper()
 
+@app.rout('/')
+def index():
+    return "<h1> Use url/{numerotelefone} </h1>"
+
 @app.route('/<int:number>')
 def hello(number=None):
     operadora = O.get()
