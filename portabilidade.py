@@ -61,10 +61,17 @@ class Oper(object):
 
 app = Flask(__name__)
 
-O = Oper()
+O = None
+
+@app.route('/'):
+def index():
+    global O
+    O = Oper()
+    return "<h2> Contadores zerados </h2>"
 
 @app.route('/<int:number>')
 def hello(number=None):
+    global O
     operadora = O.get()
     return Response("{0}".format(operadora))
 
