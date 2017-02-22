@@ -7,7 +7,7 @@ __date__ = "$09/03/2016 07:41:49$"
 
 from flask import Flask, Response
 import random
-
+import os
 
 operadoras = (
     '55301',
@@ -70,7 +70,7 @@ def hello(number=None):
 
 if __name__ == "__main__":
     try:
-        host = '0.0.0.0'
-        app.run(host=host, port=5000,debug=True)
+        port = int(os.environ.get("PORT", 5000))
+        app.run(host='0.0.0.0', port=port)
     except KeyboardInterrupt:
         raise SystemExit
