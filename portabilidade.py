@@ -63,7 +63,7 @@ app = Flask(__name__)
 
 O = None
 
-@app.route('/'):
+@app.route('/')
 def index():
     global O
     O = Oper()
