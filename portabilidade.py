@@ -58,7 +58,7 @@ def hello(number=None):
 
 if __name__ == "__main__":
     try:
-        host = '10.5.0.3'
-        app.run(host=host, port=8000,debug=True)
+        host = '0.0.0.0'
+        app.run(host=host, port=5000,debug=True)
     except KeyboardInterrupt:
         raise SystemExit
