@@ -7,7 +7,7 @@ __date__ = "$09/03/2016 07:41:49$"
 
 from flask import Flask, Response
 import random
-
+import os
 
 operadoras = (
     '55314',
