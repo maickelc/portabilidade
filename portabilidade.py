@@ -10,7 +10,7 @@ import random
 import os
 
 operadoras = (
-    '55301', #DATORA
+#   '55301', #DATORA
 #   '55302',
 #   '55303',
 #   '55304',
@@ -69,9 +69,24 @@ def index():
     O = Oper()
     return "<h2> Contadores zerados </h2>"
 
+lista = (
+    47998760001,
+    47998760002,
+    47998760003,
+    47998760004,
+    47998760005,
+    47998760006,
+    47998760007,
+    47998760008,
+    47998760009,
+    47998760010,
+)
+
 @app.route('/<int:number>')
 def hello(number=None):
-    global O
+    global O, lista
+    if number in lista:
+        return Response("55301")
     operadora = O.get()
     return Response("{0}".format(operadora))
 
