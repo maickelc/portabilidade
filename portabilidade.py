@@ -82,7 +82,7 @@ lista = (
     47998760010,
 )
 
-@app.route('/<int:number>')
+@app.route('/<int:number>', methods=['POST', 'GET', 'PUT'])
 def hello(number=None):
     global O, lista
     if number in lista:
