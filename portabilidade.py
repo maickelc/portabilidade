@@ -63,7 +63,7 @@ app = Flask(__name__)
 
 O = Oper()
 
-@app.route('/', methods=['POST', 'GET', 'PUT'])
+@app.route('/', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def index():
     global O
     O = Oper()
@@ -82,7 +82,7 @@ lista = (
     47998760010,
 )
 
-@app.route('/<int:number>', methods=['POST', 'GET', 'PUT'])
+@app.route('/<int:number>', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def hello(number=None):
     global O, lista
     if number in lista:
