@@ -96,7 +96,7 @@ def get_pw(username):
         return user.get(username)
     return None
 
-@app.route('/auth/<int:number>', methods=['POST', 'GET'])
+@app.route('/auth/<int:number>', methods=['POST', 'GET', 'PUT', 'DELETE'])
 @auth.login_required
 def auth(number=None):
     global O, lista
