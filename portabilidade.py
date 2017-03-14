@@ -63,7 +63,7 @@ app = Flask(__name__)
 
 O = Oper()
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET', 'PUT'])
 def index():
     global O
     O = Oper()
