@@ -101,7 +101,7 @@ def get_pw(username):
 def auth(number=None):
     global O, lista
     if number in lista:
-        return Response("55301")
+        return Response("55301#{}".format(number))
     operadora = O.get()
     return Response("{0}".format(operadora))
 
@@ -109,7 +109,7 @@ def auth(number=None):
 def hello(number=None):
     global O, lista
     if number in lista:
-        return Response("55301")
+        return Response("55301#{}".format(number))
     operadora = O.get()
     return Response("{0}".format(operadora))
 
